@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "ecdiff",
+  "short_name": "ecdiff",
+  "description": "Beautifies an Eclipse IDE code patch on a web browser.",
+  "author": "earvinpiamonte.com",
+  "version": "0.0.1",
+  "icons": {
+    "16": "images/16.png",
+    "32": "images/32.png"
+  },
+  "action": {},
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

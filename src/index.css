@@ -1,0 +1,52 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply tw-p-0 tw-m-0 tw-text-base;
+  }
+
+  pre[class*='language-'] {
+    @apply tw-px-0 tw-py-2 tw-mb-3 tw-rounded;
+  }
+
+  code {
+    @apply tw-mb-0 tw-block;
+    @apply tw-whitespace-pre-wrap !important;
+  }
+}
+
+@layer components {
+  .tw-container {
+    @apply tw-mb-1;
+  }
+
+  .diff-header-item {
+    @apply tw-mb-3 tw-text-gray-600 tw-break-all tw-text-sm;
+  }
+
+  .diff-header-filename {
+    @apply tw-sticky tw-top-0 tw-px-2 tw-py-2 tw-mt-4 tw-text-white tw-bg-purple-500 tw-font-medium tw-block tw-z-auto;
+  }
+
+  .diff-header-hunk {
+    @apply tw-block;
+  }
+
+  #filesNavigation {
+    @apply tw-fixed tw-bottom-6 tw-right-3 tw-z-50 tw-flex tw-flex-col;
+  }
+}
+
+.token.keyword-if,
+.token.keyword-else,
+.token.keyword-return,
+.token.comment {
+  @apply tw-italic;
+}
+
+.token.operator {
+  @apply tw-bg-transparent;
+}
