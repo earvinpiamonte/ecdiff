@@ -1,7 +1,17 @@
 import { Menu } from '@headlessui/react';
 import { DocumentTextIcon } from '@heroicons/react/outline';
+import React from 'react';
+
+import { autoScroll } from '../utils/DOM';
 
 const Header = ({ files }: { files?: string[] }) => {
+  const handleMenuItemClick = (e: React.MouseEvent<any>) => {
+    const id = e.currentTarget.getAttribute('href');
+    e.preventDefault();
+
+    autoScroll(id);
+  };
+
   return (
     <header id="header">
       <div id="filesNavigation">
@@ -14,13 +24,14 @@ const Header = ({ files }: { files?: string[] }) => {
           </Menu.Button>
           <Menu.Items className="tw-max-h-80 tw-overflow-y-auto tw-w-max tw-absolute tw-right-0 tw-mt-2 tw-top-auto tw-right-0 tw-bottom-0 tw-left-auto tw-transform tw--translate-y-12 tw-bg-white tw-rounded-md tw-shadow-lg tw-ring-1 tw-ring-black tw-ring-opacity-5 focus:tw-outline-none tw-p-1">
             {files?.map((file, i) => (
-              <Menu.Item key={i * Math.random()}>
+              <Menu.Item key={file}>
                 {({ active }) => (
                   <a
                     className={`tw-w-full tw-px-2 tw-py-2 tw-block tw-text-left ${
                       active && 'tw-bg-purple-500 tw-text-white'
                     } tw-rounded-md`}
                     href={`#file-${i + 1}`}
+                    onClick={handleMenuItemClick}
                   >
                     <DocumentTextIcon className="tw-w-5 tw-h-5 tw-align-middle tw-mr-1 tw-inline-block" />
                     <span>
