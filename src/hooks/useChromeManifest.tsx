@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Get manifest data via `chrome`
 const useChromeManifest = () => {
   const [manifest, setManifest] = React.useState<any>();
 

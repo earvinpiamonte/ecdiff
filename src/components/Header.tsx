@@ -1,6 +1,7 @@
+import React from 'react';
+
 import { Menu } from '@headlessui/react';
 import { DocumentTextIcon } from '@heroicons/react/outline';
-import React from 'react';
 
 import { autoScroll } from '../utils/DOM';
 

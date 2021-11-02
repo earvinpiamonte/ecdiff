@@ -1,4 +1,3 @@
-// Get manifest data via `fetch`
 const getManifest = async () => {
   const manifestData = await fetch(`${process.env.PUBLIC_URL}/manifest.json`)
     .then((response) => response.json())
