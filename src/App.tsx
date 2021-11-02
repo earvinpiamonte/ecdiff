@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import useChromeManifest from './hooks/useChromeManifest';
 
-function App() {
+const App = () => {
+  const manifest = useChromeManifest();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="text-purple-500">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+    <section className="tw-container tw-mx-auto tw-px-2 tw-py-12 tw-text-center">
+      <h1 className="tw-text-2xl">
+        {manifest.name} &middot; v{manifest.version}
+      </h1>
+      <p className="tw-text-lg">
+        Built by{' '}
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          href={manifest.authorURL}
           target="_blank"
           rel="noopener noreferrer"
+          className="tw-text-purple-700 tw-font-medium"
         >
-          Learn React
+          {manifest.author}
         </a>
-      </header>
-    </div>
+      </p>
+    </section>
   );
-}
+};
 
 export default App;
