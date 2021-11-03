@@ -18,7 +18,12 @@ const useChromeManifest = () => {
     loadManifest();
   }, []);
 
-  return { ...manifest, authorURL: 'https://www.earvinpiamonte.com' };
+  return {
+    ...manifest,
+    authorURL: 'https://www.earvinpiamonte.com',
+    webstoreURL:
+      'https://chrome.google.com/webstore/detail/jockmidhjggcfnfdinaihmndknopjjij',
+  };
 };
 
 export default useChromeManifest;
