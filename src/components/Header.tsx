@@ -17,9 +17,9 @@ const Header = ({ files }: { files?: string[] }) => {
     <header id="header">
       <div id="filesNavigation">
         <Menu as="div" className="tw-relative">
-          <Menu.Button className="tw-py-2 tw-px-4 tw-bg-white tw-text-purple-500 tw-text-sm tw-font-medium tw-rounded-lg tw-shadow-lg tw-border tw-border-purple-500 hover:tw-bg-gray-50 focus:tw-bg-gray-50 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-purple-400 focus:tw-ring-opacity-75">
+          <Menu.Button className="tw-py-2 tw-px-4 tw-bg-white tw-text-blue-500 tw-text-sm tw-font-medium tw-rounded-lg tw-shadow-lg tw-border tw-border-blue-500 hover:tw-bg-gray-50 focus:tw-bg-gray-50 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-400 focus:tw-ring-opacity-75">
             Files
-            <span className="tw-px-2 tw-py-0.5 tw-inline-block tw-ml-1 tw-bg-purple-500 tw-rounded-lg tw-text-white tw-text-xs">
+            <span className="tw-px-2 tw-py-0.5 tw-inline-block tw-ml-1 tw-bg-blue-500 tw-rounded-lg tw-text-white tw-text-xs">
               {files?.length}
             </span>
           </Menu.Button>
@@ -29,7 +29,7 @@ const Header = ({ files }: { files?: string[] }) => {
                 {({ active }) => (
                   <a
                     className={`tw-w-full tw-px-2 tw-py-2 tw-block tw-text-left ${
-                      active && 'tw-bg-purple-500 tw-text-white'
+                      active && 'tw-bg-blue-500 tw-text-white'
                     } tw-rounded-md`}
                     href={`#file-${i + 1}`}
                     onClick={handleMenuItemClick}

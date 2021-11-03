@@ -12,7 +12,7 @@ const Footer = () => {
             href={manifest.authorURL}
             target="_blank"
             rel="noopener noreferrer"
-            className="tw-text-purple-700 tw-font-medium"
+            className="tw-text-blue-700 tw-font-medium"
           >
             {manifest.author}
           </a>

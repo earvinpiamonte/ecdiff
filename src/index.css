@@ -28,7 +28,7 @@
   }
 
   .diff-header-filename {
-    @apply tw-sticky tw-top-0 tw-px-2 tw-py-2 tw-mt-4 tw-text-white tw-bg-purple-500 tw-font-medium tw-block tw-z-auto;
+    @apply tw-sticky tw-top-0 tw-px-2 tw-py-2 tw-mt-4 tw-text-white tw-bg-blue-500 tw-font-medium tw-block tw-z-auto;
   }
 
   .diff-header-hunk {
