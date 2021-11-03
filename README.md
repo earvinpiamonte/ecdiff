@@ -30,7 +30,7 @@ Get the extension at [Chrome Web Store](https://chrome.google.com/webstore/detai
 1. Clone
 
 ```
-git clone https://github.com/earvinpiamonte/jira-software-tool.git
+git clone https://github.com/earvinpiamonte/ecdiff.git
 ```
 
 2. `cd` to project
