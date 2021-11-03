@@ -58,7 +58,7 @@ npm run build
 8. Find the project `ecdiff/` and open it. Select `build/` as the extension directory.
 9. ecdiff extension now added to Chrome.
 
-### Credits
+## Credits
 
 Icons made by [Ilham Fitrotul Hayat](https://www.flaticon.com/authors/ilham-fitrotul-hayat) from [Flaticon](www.flaticon.com) and generated with [RealFaviconGenerator.net](https://realfavicongenerator.net/).
 
