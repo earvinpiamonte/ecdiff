@@ -7,7 +7,7 @@ const Footer = () => {
     <footer id="footer" className="tw-py-8">
       <div className="tw-container tw-mx-auto tw-px-2">
         <div className="tw-text-sm tw-text-gray-600">
-          Code patch beautified with{' '}
+          Code patch ✨beautified✨ with{' '}
           <a
             href={manifest.webstoreURL}
             target="_blank"
