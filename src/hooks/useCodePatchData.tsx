@@ -93,7 +93,7 @@ ${preTagOpen}${formattedLine}`;
 
   return `${preTagClose}<p class="diff-header-item ${notCodeLineClassName}">${formattedLine}</p>${
     lineIsIndexFileString
-      ? `<div id="file-${fileCounter - 1}" class="tw-h-2.5"></div>`
+      ? `<div id="file-${fileCounter - 1}" class="h-2.5"></div>`
       : ''
   }`;
 });

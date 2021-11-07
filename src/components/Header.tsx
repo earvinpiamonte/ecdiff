@@ -16,25 +16,27 @@ const Header = ({ files }: { files?: string[] }) => {
   return (
     <header id="header">
       <div id="filesNavigation">
-        <Menu as="div" className="tw-relative">
-          <Menu.Button className="tw-py-2 tw-px-4 tw-bg-white tw-text-blue-500 tw-text-sm tw-font-medium tw-rounded-lg tw-shadow-lg tw-border tw-border-blue-500 hover:tw-bg-gray-50 focus:tw-bg-gray-50 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-400 focus:tw-ring-opacity-75">
+        <Menu as="div" className="relative">
+          <Menu.Button className="bg-white py-2 px-3 border border-gray-300 rounded-md shadow-lg text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-white dark:border-gray-600">
             Files
-            <span className="tw-px-2 tw-py-0.5 tw-inline-block tw-ml-1 tw-bg-blue-500 tw-rounded-lg tw-text-white tw-text-xs">
+            <span className="px-2 py-0.5 inline-block ml-1 bg-blue-500 rounded-lg text-white text-xs">
               {files?.length}
             </span>
           </Menu.Button>
-          <Menu.Items className="tw-max-h-80 tw-overflow-y-auto tw-w-max tw-absolute tw-right-0 tw-mt-2 tw-top-auto tw-right-0 tw-bottom-0 tw-left-auto tw-transform tw--translate-y-12 tw-bg-white tw-rounded-md tw-shadow-lg tw-ring-1 tw-ring-black tw-ring-opacity-5 focus:tw-outline-none tw-p-1">
+          <Menu.Items className="max-h-80 overflow-y-auto w-max absolute right-0 mt-2 top-auto right-0 bottom-0 left-auto transform -translate-y-12 p-1 bg-white rounded-md shadow-lg border dark:bg-gray-900 dark:border-white dark:bg-opacity-60 focus-visible:outline-none focus-visible:ring backdrop-filter backdrop-blur dark:border-opacity-10">
             {files?.map((file, i) => (
               <Menu.Item key={file}>
                 {({ active }) => (
                   <a
-                    className={`tw-w-full tw-px-2 tw-py-2 tw-block tw-text-left ${
-                      active && 'tw-bg-blue-500 tw-text-white'
-                    } tw-rounded-md`}
+                    className={`w-full px-2 py-2 block text-left text-sm dark:text-white rounded-md ${
+                      active
+                        ? 'bg-gray-100 text-gray-900 dark:bg-white dark:bg-opacity-20'
+                        : 'text-gray-700'
+                    }`}
                     href={`#file-${i + 1}`}
                     onClick={handleMenuItemClick}
                   >
-                    <DocumentTextIcon className="tw-w-5 tw-h-5 tw-align-middle tw-mr-1 tw-inline-block" />
+                    <DocumentTextIcon className="w-5 h-5 align-middle mr-2 inline-block" />
                     <span>
                       {file.length > 50 ? '...' : ''}
                       {file.slice(-50)}

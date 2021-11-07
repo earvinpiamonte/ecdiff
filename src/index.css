@@ -5,38 +5,47 @@
 
 @layer base {
   body {
-    @apply tw-p-0 tw-m-0 tw-text-base;
+    @apply p-0 m-0 text-base;
   }
 
   pre[class*='language-'] {
-    @apply tw-px-0 tw-py-2 tw-mb-3 tw-rounded;
+    @apply px-0 py-2 mb-3 rounded dark:bg-gray-800;
+  }
+
+  code[class*='language-'] {
+    @apply dark:text-gray-300;
+  }
+
+  .dark code[class*='language-'],
+  .dark pre[class*='language-'] {
+    text-shadow: none;
   }
 
   code {
-    @apply tw-mb-0 tw-block;
-    @apply tw-whitespace-pre-wrap !important;
+    @apply mb-0 block;
+    @apply whitespace-pre-wrap !important;
   }
 }
 
 @layer components {
-  .tw-container {
-    @apply tw-mb-1;
+  .container {
+    @apply mb-1;
   }
 
   .diff-header-item {
-    @apply tw-mb-3 tw-text-gray-600 tw-break-all tw-text-sm;
+    @apply mb-3 text-gray-600 break-all text-sm;
   }
 
   .diff-header-filename {
-    @apply tw-sticky tw-top-0 tw-px-2 tw-py-2 tw-mt-4 tw-text-white tw-bg-blue-500 tw-font-medium tw-block tw-z-40;
+    @apply sticky top-0 px-2 py-2 mt-4 font-medium block z-40 bg-gray-100 bg-opacity-50 dark:text-white dark:bg-opacity-50 dark:bg-gray-800 backdrop-filter backdrop-blur;
   }
 
   .diff-header-hunk {
-    @apply tw-block;
+    @apply block;
   }
 
   #filesNavigation {
-    @apply tw-fixed tw-bottom-6 tw-right-3 tw-z-50 tw-flex tw-flex-col;
+    @apply fixed bottom-6 right-3 z-50 flex flex-col;
   }
 }
 
@@ -44,9 +53,9 @@
 .token.keyword-else,
 .token.keyword-return,
 .token.comment {
-  @apply tw-italic;
+  @apply italic;
 }
 
 .token.operator {
-  @apply tw-bg-transparent;
+  @apply bg-transparent;
 }

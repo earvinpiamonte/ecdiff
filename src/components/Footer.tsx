@@ -1,4 +1,4 @@
-import { SparklesIcon } from '@heroicons/react/solid';
+import { HeartIcon } from '@heroicons/react/solid';
 
 import useChromeManifest from '../hooks/useChromeManifest';
 
@@ -6,19 +6,20 @@ const Footer = () => {
   const manifest = useChromeManifest();
 
   return (
-    <footer id="footer" className="tw-py-8">
-      <div className="tw-container tw-mx-auto tw-px-2">
-        <div className="tw-text-sm tw-text-gray-600">
+    <footer
+      id="footer"
+      className="py-8 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700"
+    >
+      <div className="container mx-auto px-2">
+        <div className="text-sm text-gray-600">
           Code patch{' '}
-          <SparklesIcon className="tw-w-4 tw-h-4 tw-inline-block tw-text-yellow-500 tw-align-middle" />
-          beautified
-          <SparklesIcon className="tw-w-4 tw-h-4 tw-inline-block tw-text-yellow-500 tw-align-middle" />{' '}
-          with{' '}
+          <HeartIcon className="w-5 h-5 inline-block text-red-500 align-top" />{' '}
+          beautified with{' '}
           <a
             href={manifest.webstoreURL}
             target="_blank"
             rel="noopener noreferrer"
-            className="tw-text-blue-700 tw-font-medium"
+            className="text-blue-700 font-medium"
           >
             {manifest.name}
           </a>{' '}

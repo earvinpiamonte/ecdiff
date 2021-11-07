@@ -1,8 +1,8 @@
 const CodePatch = ({ formattedLines }: { formattedLines?: string[] }) => {
   return (
-    <section id="code-patch">
+    <section id="code-patch" className="bg-white dark:bg-gray-900 py-8">
       <div
-        className="tw-container tw-mx-auto tw-px-2 tw-mt-8"
+        className="container mx-auto px-2"
         dangerouslySetInnerHTML={{ __html: formattedLines?.join('') ?? '' }}
       />
     </section>
