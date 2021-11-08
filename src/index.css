@@ -9,7 +9,7 @@
   }
 
   pre[class*='language-'] {
-    @apply px-0 py-2 mb-3 rounded dark:bg-gray-800;
+    @apply px-0 py-2 mb-3 rounded-lg border dark:bg-gray-900 dark:border-gray-800;
   }
 
   code[class*='language-'] {
@@ -25,6 +25,14 @@
     @apply mb-0 block;
     @apply whitespace-pre-wrap !important;
   }
+
+  ::selection,
+  code[class*='language-'] ::selection,
+  code[class*='language-']::selection,
+  pre[class*='language-'] ::selection,
+  pre[class*='language-']::selection {
+    @apply bg-blue-500 text-white;
+  }
 }
 
 @layer components {
@@ -37,7 +45,7 @@
   }
 
   .diff-header-filename {
-    @apply sticky top-0 px-2 py-2 mt-4 font-medium block z-40 bg-gray-100 bg-opacity-50 dark:text-white dark:bg-opacity-50 dark:bg-gray-800 backdrop-filter backdrop-blur;
+    @apply sticky top-0 px-2 py-2 mt-4 font-medium block z-40 bg-gray-100 dark:text-white dark:bg-gray-800;
   }
 
   .diff-header-hunk {

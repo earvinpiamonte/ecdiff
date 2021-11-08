@@ -10,6 +10,8 @@ type ThemeContextTypes = {
 
 export const ThemeContext = React.createContext({} as ThemeContextTypes);
 
+let bodyInvisibilityTimeout = setTimeout(() => {});
+
 const ThemeProvider: React.FC<{ defaultTheme?: string }> = ({
   children,
   defaultTheme,
@@ -20,19 +22,22 @@ const ThemeProvider: React.FC<{ defaultTheme?: string }> = ({
     theme === 'dark'
       ? rootElementClassList.add('dark')
       : rootElementClassList.remove('dark');
+
+    // Remove the body invisibility class if it exists
+    bodyInvisibilityTimeout = setTimeout(() => {
+      document.body.classList.remove('invisible');
+    }, 300);
   };
 
   const getThemeFromStorage = async () => {
     // Get from chrome storage
     const storedTheme: any = await getChromeData('theme', defaultTheme);
     setTheme(storedTheme);
-    console.log({ storedTheme });
   };
 
   const saveThemeToStorage = async () => {
     // Save to chrome storage
     await setChromeData('theme', theme);
-    console.log({ theme });
   };
 
   const [theme, setTheme] = React.useState(defaultTheme ?? 'light');
@@ -45,6 +50,10 @@ const ThemeProvider: React.FC<{ defaultTheme?: string }> = ({
   React.useEffect(() => {
     addDarkClass();
     saveThemeToStorage();
+
+    return () => {
+      clearTimeout(bodyInvisibilityTimeout);
+    };
   }, [theme]);
 
   return (

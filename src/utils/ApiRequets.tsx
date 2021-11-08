@@ -4,7 +4,6 @@ const getManifest = async () => {
     .catch(() => {
       console.log('Error getting manifest data.');
     });
-  console.log('Loaded manifest from file.');
   return manifestData;
 };
 
