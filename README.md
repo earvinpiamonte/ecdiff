@@ -4,15 +4,26 @@ Beautifies an Eclipse IDE code patch on a web browser.
 
 ![alt text](./webstore/social-preview.jpg 'ecdiff screenshot')
 
+## Features
+
+- Syntax highlighting
+- Light/ dark mode
+
 ## Usage
 
 1. Open a code patch file on a Chrome browser
 2. Click on the ecdiff extension icon
 
+> Toggle dark mode on options page: Right click on the ecdiff extension icon then click on "Options".
+
 ## Supported code patches
 
 - Unified diff with Eclipse IDE
 - Unified diff with CVS
+
+## Syntax highlighting support
+
+- 275 languages ([View list](https://prismjs.com/#supported-languages))
 
 ## Built with
 
@@ -62,7 +73,7 @@ npm run build
 
 Icons made by [Ilham Fitrotul Hayat](https://www.flaticon.com/authors/ilham-fitrotul-hayat) from [Flaticon](www.flaticon.com) and generated with [RealFaviconGenerator.net](https://realfavicongenerator.net/).
 
-Code patch attachment used as screenshot - [https://bugzillaattachments.eclipsecontent.org/bugs/attachment.cgi?id=78905#file-1](https://bugzillaattachments.eclipsecontent.org/bugs/attachment.cgi?id=78905#file-1)
+Code patch attachment used as screenshot - [https://bugzillaattachments.eclipsecontent.org/bugs/attachment.cgi?id=78905](https://bugzillaattachments.eclipsecontent.org/bugs/attachment.cgi?id=78905)
 
 ## Maintainer
 
