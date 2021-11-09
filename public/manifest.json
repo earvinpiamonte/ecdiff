@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "ecdiff",
   "short_name": "ecdiff",
-  "description": "Beautifies an Eclipse IDE code patch on a web browser.",
+  "description": "Beautifies an Eclipse IDE and CVS unified diff code patch on the browser.",
   "author": "earvinpiamonte.com",
   "version": "0.1.0",
   "icons": {

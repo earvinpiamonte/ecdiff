@@ -1,12 +1,12 @@
 # ecdiff
 
-Beautifies an Eclipse IDE code patch on a web browser.
+Beautifies an Eclipse IDE and CVS unified diff code patch on the browser.
 
 ![alt text](./webstore/social-preview.jpg 'ecdiff screenshot')
 
 ## Features
 
-- Syntax highlighting
+- Code syntax highlighting
 - Light/ dark mode
 
 ## Usage
@@ -18,8 +18,8 @@ Beautifies an Eclipse IDE code patch on a web browser.
 
 ## Supported code patches
 
-- Unified diff with Eclipse IDE
-- Unified diff with CVS
+- Unified diff code patches created with Eclipse IDE
+- Unified diff code patches created with CVS diff
 
 ## Syntax highlighting support
 
