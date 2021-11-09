@@ -17,7 +17,7 @@ const Header = ({ files }: { files?: string[] }) => {
     <header id="header">
       <div id="filesNavigation">
         <Menu as="div" className="relative">
-          <Menu.Button className="bg-white py-2 px-3 border border-gray-300 rounded-md shadow-lg text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-white dark:border-gray-600">
+          <Menu.Button className="bg-white py-2 px-3 border border-gray-300 rounded-md shadow-lg text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-white dark:border-gray-700">
             Files
             <span className="px-2 py-0.5 inline-block ml-1 bg-blue-500 rounded-lg text-white text-xs">
               {files?.length}

@@ -9,7 +9,7 @@
   }
 
   pre[class*='language-'] {
-    @apply px-0 py-2 mb-3 rounded-lg border dark:bg-gray-900 dark:border-gray-800;
+    @apply px-0 py-2 mb-3 rounded-lg border dark:bg-gray-900 dark:border-gray-700;
   }
 
   code[class*='language-'] {

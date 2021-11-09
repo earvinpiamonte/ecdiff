@@ -27,7 +27,7 @@ const App = () => {
           </div>
         </div>
       </section>
-      <footer className="fixed py-8 left-0 right-0 bottom-0 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+      <footer className="fixed py-8 left-0 right-0 bottom-0 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
         <div className="container mx-auto lg:w-6/12 px-4">
           <p className="text-sm text-gray-600">
             <span>Designed and built by</span>{' '}
