@@ -45,7 +45,7 @@
   }
 
   .diff-header-filename {
-    @apply sticky top-0 px-2 py-2 mt-4 font-medium block z-40 bg-gray-100 dark:text-white dark:bg-gray-800;
+    @apply sticky top-0 px-2 py-2 mt-4 font-medium font-mono block z-40 bg-gray-100 dark:text-white dark:bg-gray-800;
   }
 
   .diff-header-hunk {

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Menu } from '@headlessui/react';
-import { DocumentTextIcon } from '@heroicons/react/outline';
 
 import { autoScroll } from '../utils/DOM';
 
@@ -36,8 +35,14 @@ const Header = ({ files }: { files?: string[] }) => {
                     href={`#file-${i + 1}`}
                     onClick={handleMenuItemClick}
                   >
-                    <DocumentTextIcon className="w-5 h-5 align-middle mr-2 inline-block" />
-                    <span>
+                    <span
+                      className={`w-10 h-6.5 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded inline-block mr-2 truncate align-middle ${
+                        files.length < 9 ? 'text-center' : 'text-right'
+                      }`}
+                    >
+                      {i + 1}
+                    </span>
+                    <span className="font-mono">
                       {file.length > 50 ? '...' : ''}
                       {file.slice(-50)}
                     </span>
