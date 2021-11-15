@@ -36,6 +36,8 @@ Beautifies an Eclipse IDE and CVS unified diff code patch on the browser.
 
 Get the extension at [Chrome Web Store](https://chrome.google.com/webstore/detail/jockmidhjggcfnfdinaihmndknopjjij/).
 
+> Heads up! To format local code patch files at `file:///`, enable "Allow access to file URLs" on [chrome://extensions/?id=jockmidhjggcfnfdinaihmndknopjjij](chrome://extensions/?id=jockmidhjggcfnfdinaihmndknopjjij).
+
 ## Add to Google Chrome w/ developer mode
 
 1. Clone
