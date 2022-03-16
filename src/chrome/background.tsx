@@ -14,20 +14,20 @@ const init = (tabId: number) => {
 };
 
 const documentIsValidToFormat = () => {
+  const patchIdentifiers = ['diff --git', 'RCS file:'];
+
   const $pre = document.querySelector('body > pre');
   const $body = document.body;
 
-  const rcsFileText = 'RCS file:';
-
   const { formatted } = $body.dataset;
-  const noPreTag = !$pre;
-  const noRcsFileText = !$body.innerHTML.includes(rcsFileText);
+  const hasPreTag = !!$pre;
+  const isFormatted = formatted == 'true';
+  const isNotFormatted = !isFormatted;
+  const isValidPatch = patchIdentifiers.some((patchIdentifier) =>
+    $body.innerHTML.includes(patchIdentifier)
+  );
 
-  if (formatted || noPreTag || noRcsFileText) {
-    return false;
-  }
-
-  return true;
+  return isNotFormatted && hasPreTag && isValidPatch;
 };
 
 const formatPatch = (tabId: number) => {
