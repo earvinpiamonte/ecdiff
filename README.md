@@ -1,6 +1,6 @@
 # ecdiff
 
-Beautifies an Eclipse IDE and CVS unified diff code patch on the browser.
+Beautifies Git and CVS code patches on the browser.
 
 ![alt text](./webstore/social-preview.jpg 'ecdiff screenshot')
 
@@ -11,15 +11,18 @@ Beautifies an Eclipse IDE and CVS unified diff code patch on the browser.
 
 ## Usage
 
-1. Open a code patch file on a Chrome browser
-2. Click on the ecdiff extension icon
+1. Open a code patch file on a Chrome/ Chromium-based browser
+1. Click on the ecdiff extension icon
 
 > Toggle dark mode on options page: Right click on the ecdiff extension icon then click on "Options".
 
+> Heads up! To format local code patch files at `file:///`, enable "Allow access to file URLs" on [chrome://extensions/?id=jockmidhjggcfnfdinaihmndknopjjij](chrome://extensions/?id=jockmidhjggcfnfdinaihmndknopjjij).
+
 ## Supported code patches
 
-- Unified diff code patches created with Eclipse IDE
-- Unified diff code patches created with CVS diff
+- git diff
+- unified diff code patches created with Eclipse IDE
+- unified diff code patches created with CVS diff
 
 ## Syntax highlighting support
 
@@ -34,9 +37,7 @@ Beautifies an Eclipse IDE and CVS unified diff code patch on the browser.
 
 ## Add to Google Chrome
 
-Get the extension at [Chrome Web Store](https://chrome.google.com/webstore/detail/jockmidhjggcfnfdinaihmndknopjjij/).
-
-> Heads up! To format local code patch files at `file:///`, enable "Allow access to file URLs" on [chrome://extensions/?id=jockmidhjggcfnfdinaihmndknopjjij](chrome://extensions/?id=jockmidhjggcfnfdinaihmndknopjjij).
+Get the latest version of the extension at [Chrome Web Store](https://chrome.google.com/webstore/detail/jockmidhjggcfnfdinaihmndknopjjij/).
 
 ## Add to Google Chrome w/ developer mode
 
