@@ -1,20 +1,7 @@
+import { notCodePrefixes } from '../constants';
+
+const [indexFileString, hunkHeader, diffGitString] = notCodePrefixes;
 const $pre = document.querySelector('body > pre');
-
-// Not code line prefixes
-const notCodePrefixes = [
-  'Index:',
-  '@@ ',
-  'RCS file:',
-  '### Eclipse Workspace Patch',
-  '#P ',
-  '===================================================================',
-  'retrieving revision ',
-  'diff ',
-  '--- ',
-  '+++ ',
-];
-
-const [indexFileString, hunkHeader] = notCodePrefixes;
 
 // File name tracker
 let currentFileName = '';
@@ -51,12 +38,22 @@ const formattedLines = lines?.map((line: string) => {
   const lineIsIndexFileString =
     line.substring(0, indexFileString.length) == indexFileString;
 
+  const lineIsDiffGitString =
+    line.substring(0, diffGitString.length) == diffGitString;
+
   const lineIsHunkHeader = line.substring(0, hunkHeader.length) == hunkHeader;
+
+  const lineHasValidFileName = lineIsIndexFileString || lineIsDiffGitString;
 
   previousLineCodeFound = lineCodeFound;
 
-  if (lineIsIndexFileString) {
-    currentFileName = line.replaceAll(indexFileString, '');
+  if (lineHasValidFileName) {
+    const fileNameIdentifier = lineIsIndexFileString
+      ? indexFileString
+      : diffGitString;
+
+    currentFileName = line.replaceAll(fileNameIdentifier, '');
+
     files.push(currentFileName);
 
     const fileNameSegments = currentFileName.split('.');
@@ -69,7 +66,10 @@ const formattedLines = lines?.map((line: string) => {
 
     fileCounter++;
 
-    formattedLine = formattedLine.replaceAll('Index:', fileCounter - 1 + '.');
+    formattedLine = formattedLine.replaceAll(
+      fileNameIdentifier,
+      fileCounter - 1 + '.'
+    );
   }
 
   if (lineIsHunkHeader) {
@@ -92,7 +92,7 @@ ${preTagOpen}${formattedLine}`;
   }
 
   return `${preTagClose}<p class="diff-header-item ${notCodeLineClassName}">${formattedLine}</p>${
-    lineIsIndexFileString
+    lineHasValidFileName
       ? `<div id="file-${fileCounter - 1}" class="h-2.5"></div>`
       : ''
   }`;
